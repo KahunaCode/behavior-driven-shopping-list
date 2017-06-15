@@ -16,4 +16,8 @@ describe('ShoppingListItem', function(){
   it('should have a property named "name"', function() {
     expect(ShoppingListItem).to.have.property('name');
   });
+
+  it('should have property named description', function(){
+    expect(ShoppingListItem).to.have.property('description');
+  });
 });
