@@ -5,6 +5,8 @@ class ShoppingListItem {
     this.description = description;
     this.is_done = is_done;
   }
+
+
 }
 
 module.exports = ShoppingListItem;
