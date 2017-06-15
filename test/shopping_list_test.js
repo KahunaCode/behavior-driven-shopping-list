@@ -8,16 +8,24 @@ var SLI = require('../js/shopping_list_item.js');
 describe('ShoppingListItem', function(){
 
   var ShoppingListItem = SLI;
+  var milk;
 
   it('should be a class', function() {
     expect(ShoppingListItem).to.be.a('function');
   });
 
-  it('should have a property named "name"', function() {
-    expect(ShoppingListItem).to.have.property('name');
+  it('should have a property named name', function() {
+    milk = new ShoppingListItem('milk');
+    expect(milk.name).to.equal('milk');
   });
 
   it('should have property named description', function(){
-    expect(ShoppingListItem).to.have.property('description');
+    milk = new ShoppingListItem('milk', 'cows');
+    expect(milk.description).to.equal('cows');
+  });
+
+  it('should have a property named is_done', function() {
+    milk = new ShoppingListItem('milk', 'cows', true);
+    expect(milk.is_done).to.equal(true);
   });
 });
