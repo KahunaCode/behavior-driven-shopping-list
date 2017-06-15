@@ -28,4 +28,9 @@ describe('ShoppingListItem', function(){
     milk = new ShoppingListItem('milk', 'cows', true);
     expect(milk.is_done).to.equal(true);
   });
+
+  it('has constructor method with two arguments name and description', function() {
+      expect(ShoppingListItem.name).to.not.equal(undefined);
+      expect(ShoppingListItem.description).to.not.equal(undefined);
+  });
 });
