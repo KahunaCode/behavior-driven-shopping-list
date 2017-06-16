@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
-class ShoppingListItem {
+class ShoppingList {
   constructor() {
 
   }
 }
 
-module.exports = ShoppingListItem;
+module.exports = ShoppingList;
