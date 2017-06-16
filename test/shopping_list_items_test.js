@@ -59,6 +59,7 @@ describe('ShoppingListItem', function(){
 var SL = require('../js/shopping_list.js');
 
 describe('ShoppingList', function() {
+  var ShoppingListItem = SLI;
   var ShoppingList = SL;
   var cheese;
 
@@ -81,8 +82,19 @@ describe('ShoppingList', function() {
   it('has method addItem', function() {
     var temp = new ShoppingListItem('milk', 'cows');
     expect(cheese.addItem).to.have.lengthOf(1);
-    cheese.addItem();
+    cheese.addItem(temp);
     expect(cheese.items.length).to.equal(1);
-    expect(cheese.addItem('blah').to.equal('error'));
+    expect(cheese.items[0]).to.be.an.instanceof(ShoppingListItem);
   });
+
+  it('has a method removeItem', function() {
+    var temp = new ShoppingListItem('milk', 'cows');
+    cheese.addItem(temp);
+    cheese.removeItem(temp);
+    expect(cheese).to.not.include(temp);
+    expect(cheese.removeItem()).to.equal(items = items.pop());
+    var temp2;
+    expect(cheese.removeItem(temp2).to.be.an('error'));
+  });
+
 });
