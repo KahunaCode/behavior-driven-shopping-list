@@ -55,3 +55,34 @@ describe('ShoppingListItem', function(){
     expect(milk.render()).to.equal(`<li class="completed_${milk.is_done}"><span>${milk.name}</span> <span>${milk.description}</span>`);
   });
 });
+
+var SL = require('../js/shopping_list.js');
+
+describe('ShoppingList', function() {
+  var ShoppingList = SL;
+  var cheese;
+
+  beforeEach(function() {
+    cheese = new ShoppingList('swiss');
+  });
+
+  it('should be a class', function() {
+    expect(ShoppingList).to.be.a('function');
+  });
+
+  it('should have a property named items', function() {
+    expect(cheese.items).to.not.equal(undefined);
+  });
+
+  it('has a constructor methods that initialized items as an empty array', function () {
+    expect(cheese.items).to.be.a('array');
+  });
+
+  it('has method addItem', function() {
+    var temp = new ShoppingListItem('milk', 'cows');
+    expect(cheese.addItem).to.have.lengthOf(1);
+    cheese.addItem();
+    expect(cheese.items.length).to.equal(1);
+    expect(cheese.addItem('blah').to.equal('error'));
+  });
+});
