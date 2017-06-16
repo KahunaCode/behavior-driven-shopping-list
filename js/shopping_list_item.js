@@ -6,6 +6,9 @@ class ShoppingListItem {
     this.is_done = false;
   }
 
+  check(){
+    this.is_done = true;
+  }
 }
 
 module.exports = ShoppingListItem;
