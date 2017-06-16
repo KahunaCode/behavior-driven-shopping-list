@@ -15,5 +15,9 @@ function add_to_shopping_list() {
   description = document.getElementById('description').value;
   console.log(title + " " + description);
   new_shopping_list_item = new ShoppingListItem(title, description);
-  console.log(new_shopping_list_item);
+  shoppingList.addItem(new_shopping_list_item);
+  console.log(new_shopping_list_item.render());
+
+  content.innerHTML += new_shopping_list_item.render();
+
 }
