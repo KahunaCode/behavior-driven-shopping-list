@@ -41,4 +41,11 @@ describe('ShoppingListItem', function(){
     milk.check();
     expect(milk.is_done).to.equal(true);
   });
+
+  it('has a method named uncheck', function() {
+    expect(milk.uncheck).to.be.a('function');
+    milk.uncheck();
+    expect(milk.is_done).to.equal(false);
+  });
+
 });
