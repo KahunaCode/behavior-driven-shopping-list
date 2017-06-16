@@ -18,5 +18,3 @@ class ShoppingListItem {
     return `<li class="completed_${this.is_done}"><span>${this.name}</span> <span>${this.description}</span>`;
   }
 }
-
-module.exports = ShoppingListItem;
