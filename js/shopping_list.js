@@ -31,4 +31,15 @@ class ShoppingList {
     console.log("nothing in array");
   }
 
+  render() {
+    var expectedOutput = '<ul>';
+    for (var i = 0; i < this.items.length; i++) {
+      expectedOutput += '<li>';
+      expectedOutput += this.items[i];
+      expectedOutput += '</li>';
+    }
+    expectedOutput += '</ul>';
+    return expectedOutput;
+  }
+
 }
