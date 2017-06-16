@@ -16,7 +16,16 @@ describe('ShoppingListItem', function(){
   });
 
   it('should be a class', function() {
-    expect(milk.items).to.not.equal(undefined);
+    expect(milk.items).to.be.a('function');
   });
+
+  it('should have a property named items', function() {
+    expect(milk.items).to.not.be(undefined);
+  });
+
+  it('has a constructor methods that initialized items as an empty array', function() {
+    expect(milk.items).to.equal([]);
+  });
+
 
 });
