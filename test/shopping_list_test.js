@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 var chai = require('chai');
 
 var expect = chai.expect;
@@ -48,4 +49,9 @@ describe('ShoppingListItem', function(){
     expect(milk.is_done).to.equal(false);
   });
 
+  it('has a method named render', function() {
+    expect(milk.render).to.be.a('function');
+    expect(milk.render()).to.be.a('string');
+    expect(milk.render()).to.equal(`<li class="completed_${milk.is_done}"><span>${milk.name}</span> <span>${milk.description}</span>`);
+  });
 });
