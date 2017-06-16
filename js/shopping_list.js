@@ -5,14 +5,30 @@ class ShoppingList {
   }
 
   addItem(thing){
-    try {
+    if(thing instanceof ShoppingListItem) {
       this.items.push(thing);
-    }
-    catch  (e) {
-      console.log(e);
+    } else {
+      throw new Error("Error!");
     }
   }
 
-}
+  removeItem(thing) {
+    if(this.items.length > 0) {
+      if(thing instanceof ShoppingListItem) {
+        if(thing) {
+          if(this.items.indexOf(thing) >= 0) {
+            this.items.splice(this.items.indexOf(thing), 1);
+          }
+        } else {
+          this.items.pop();
+        }
 
-module.exports = ShoppingList;
+      } else {
+        console.log("not sli");
+        throw new Error("Error!");
+      }
+    }
+    console.log("nothing in array");
+  }
+
+}
