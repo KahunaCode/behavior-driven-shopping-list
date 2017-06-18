@@ -22,23 +22,18 @@ class ShoppingList {
         } else {
           this.items.pop();
         }
-
       } else {
-        console.log("not sli");
         throw new Error("Error!");
       }
     }
-    console.log("nothing in array");
   }
 
   render() {
-    var expectedOutput = '<ul>';
+    var expectedOutput = "<ul>";
     for (var i = 0; i < this.items.length; i++) {
-      expectedOutput += '<li>';
-      expectedOutput += this.items[i];
-      expectedOutput += '</li>';
+      expectedOutput += this.items[i].render();
     }
-    expectedOutput += '</ul>';
+    expectedOutput += "</ul>";
     return expectedOutput;
   }
 

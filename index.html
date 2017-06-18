@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<div id="content">
+<div class="main-container">
+  <h1>Check-list</h1>
+  <div id="input-area">
+    <form onsubmit=" return false">
+      title: <input type="" name="" id="title"></input><br>
+      description: <input type="" name="" id="description"></input><br>
+      <button id="add_shopping_list_item_button">Add to Shopping List</button>
+    </form>
+  </div>
+  <div id="content">
 
-</div>
-<div id="input-area">
-  <form onsubmit="return false">
-    title: <input type="" name="" id="title"></input><br>
-    description: <input type="" name="" id="description"></input><br>
-    <button id="add_shopping_list_item_button">Add to Shopping List</button>
-  </form>
+  </div>
 </div>
 
 <script src="js/shopping_list.js"></script>
