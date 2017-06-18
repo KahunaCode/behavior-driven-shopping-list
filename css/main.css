@@ -1,0 +1,22 @@
+body {
+  padding: 30px;
+}
+
+.main-container {
+  background-color: green;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+}
+
+#input-area {
+  background-color: red;
+}
+
+#content {
+  background-color: blue;
+}
